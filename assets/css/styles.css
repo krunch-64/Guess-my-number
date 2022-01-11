@@ -1,12 +1,11 @@
 @import url(//db.onlinewebfonts.com/c/2179845ee578cd3bb30b55dc922bfb38?family=Shrek);
 body {
-    background-image: url(./../img/fond-definitif.png);
-    position:relative;
-    background-size:cover; 
-    background-repeat:no-repeat; 
-    background-attachment: fixed;
-
-    
+    background-image: url(./../img/fond\ definitif.png);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 .shrek {
     position: fixed;
@@ -18,11 +17,10 @@ header {
     height: 30px;
     width: 30px;
 }
+
 h1 {
     font-family: "Shrek";
     color: lawngreen;
     align-items: center; 
-    text-align: center; 
-} 
-
-
+    text-align: center;
+}
