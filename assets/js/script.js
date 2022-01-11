@@ -21,7 +21,7 @@ function startGame(max) {
 };
 
 function game() {
-    let playerNumber = $("")
+    let playerNumber = $(".game input")
 }
 // Fonction ready
 $(function () {
