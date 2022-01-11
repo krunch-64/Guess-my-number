@@ -21,20 +21,24 @@
         <h1 class="text-center">LOGO</h1>
     </header>
     <div class="container">
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Selectionnez une difficulté</option>
-            <option value="1">Niveau 1 - Ti biscuit (0-50)</option>
-            <option value="2">Niveau 2 - Lord Farkwad (0-100)</option>
-            <option value="3">Niveau 3 - L'Âne (0-250)</option>
-        </select>
-        <button class="btn-primmary">Commencer</button>
-        
-        <form id="formguess">
+        <div>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selectionnez une difficulté</option>
+                <option value="1">Niveau 1 - Ti biscuit (0-50)</option>
+                <option value="2">Niveau 2 - Lord Farkwad (0-100)</option>
+                <option value="3">Niveau 3 - L'Âne (0-250)</option>
+            </select>
+            <button class="btn-primmary" id="btn-start">Commencer</button>
+        </div>
+        <div>
+            <form class="d-none" id="formguess">
             <label for="inputGuess" class="form-label">Choisissez un chiffres !</label>
             <input type="guess" class="form-control" id="inputGuess" placeholder="Enter your guess here!">
-        </form>
-        <button class="btn-primmary js-deviner">Deviner</button>
-        <button class="btn-primmary">Rejouer !</button>
+            </form>
+            <button class="btn-primmary d-none" id="">Deviner</button>
+            <button class="btn-primmary d-none">Rejouer !</button>
+        </div>
+        
     </div>
   
 
