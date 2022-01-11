@@ -1,5 +1,10 @@
 body {
-    background-image: url(./../img/fond\ fin.jpg);
+    background-image: url(./../img/fond\ definitif.png);
     background-size: cover;
 } 
 
+h1 .text-center{
+    width: 150px; 
+    top: 150px; 
+    background-position: top;
+}
