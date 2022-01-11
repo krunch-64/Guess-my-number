@@ -11,10 +11,7 @@ body {
     position: fixed;
     top: 0;
 }
-header {
-    height: 30px;
-    width: 30px;
-}
+
 h1 {
     font-family: "Shrek";
     color: lawngreen;
