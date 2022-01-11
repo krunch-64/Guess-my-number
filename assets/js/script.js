@@ -46,7 +46,8 @@ function startGame(max) {
                     count += 1
                     $(".form-label").text("Tu as gagné avec "+count+" coup");
                     $(".game input").attr("placeholder" , "Le chiffre c'était "+ number).val("")
-                    $(".replay").removeClass("d-none"); 
+                    $(".replay").removeClass("d-none");
+                    $(".guess").addClass("d-none");
                 }
             }
         })
