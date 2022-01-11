@@ -10,7 +10,8 @@ body {
 }
 .shrek {
     position: fixed;
-    top: 0;
+    margin-bottom: 18px; 
+   
     
 }
 header {
@@ -23,6 +24,5 @@ h1 {
     align-items: center; 
     text-align: center; 
 } 
-
 
 
