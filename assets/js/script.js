@@ -33,12 +33,12 @@ function startGame(max) {
             else {
                 
                 if (playerNumber > number ) {
-                  $(".form-label").text("plus bas");
+                  $(".form-label").text("Plus Bas");
                   $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
                   count += 1
                 }
                 else if (playerNumber < number) {
-                    $(".form-label").text("plus haut");
+                    $(".form-label").text("Plus Haut");
                     $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
                     count += 1
                 }
