@@ -21,32 +21,29 @@
         <h1 class="text-center">Guess my number</h1>
     </header>
     <div class="container">
-        <div>
+        <div class="selectLevel">
             <select class="form-select" aria-label="Default select example">
-                <option selected>Selectionnez une difficulté</option>
-                <option value="1">Niveau 1 - Ti biscuit (0-50)</option>
-                <option value="2">Niveau 2 - Lord Farkwad (0-100)</option>
-                <option value="3">Niveau 3 - L'Âne (0-250)</option>
+                <option selected>Sélectionnez une difficulté</option>
+                <option value="50">Niveau 1 - Ti biscuit (0-50)</option>
+                <option value="100">Niveau 2 - Lord Farkwad (0-100)</option>
+                <option value="250">Niveau 3 - L'Âne (0-250)</option>
             </select>
             <button class="btn-primmary" id="btn-start">Commencer</button>
         </div>
-        <div>
-            <form class="d-none" id="formguess">
-            <label for="inputGuess" class="form-label">Choisissez un chiffres !</label>
+        <div class="game">
+            <form id="formguess">
+            <label for="inputGuess" class="form-label text-white">Choisissez un chiffres !</label>
             <input type="guess" class="form-control" id="inputGuess" placeholder="Enter your guess here!">
             </form>
-            <button class="btn-primmary d-none" id="">Deviner</button>
-            <button class="btn-primmary d-none">Rejouer !</button>
-        </div> 
-        <div class="shrek">
-            <img src="./assets/img/shrek 1.png" alt="shrek">
+
+            <button class="btn-primmary" >Deviner</button>
+            <button class="btn-primmary replay" >Rejouer !</button>
         </div>
         
+        <div class="shrek">
+            <img src="./assets/img/shrek 1.png" alt="shrek">
+
     </div>
-  
 
 </body> 
-<footer>
-    
-</footer>
 </html>

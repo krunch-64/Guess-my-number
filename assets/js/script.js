@@ -1,41 +1,29 @@
 // Fonction commencer la partie
-function startGame() {
-    $("btn-primmary").click(function () {
-        console.log("test bouton")
-    })
-};
-// Fonction random
-function getRandomNumber() {
-    let max = 0;
-
+function startGame(max) {
+    $(".game").addClass("d-none");
     $('select').on('change', function() {
-        if($('select').val() == 1){
-            max = 50;
-            // console.log('0 - 50');
-        }
-        else if($('select').val() == 2){
-            max = 100;
-            // console.log('0 - 100');
-        }
-        else if($('select').val() == 3){
-            max = 250;
-            // console.log('0 - 250');
-        };
+        max = $("select").val();
+        $("select").removeClass("is-invalid")
     });
     $("#btn-start").click(function () {
-        return Math.floor(Math.random() * max);
-        
-        // console.log(max);
+        if ($("select").val() == "Sélectionnez une difficulté" ) {
+                $("select").addClass("is-invalid")
+        }
+        else {
+            $(".selectLevel").addClass("d-none");
+            $(".game").removeClass("d-none");
+            $(".replay").addClass("d-none")
+            let number = Math.floor(Math.random() * max);
+            console.log(number)
+            return number
+        }
     })
-    
-
-
 };
 
+function game() {
+    let playerNumber = $("")
+}
 // Fonction ready
 $(function () {
-
     startGame();
-    getRandomNumber();
-
 });
