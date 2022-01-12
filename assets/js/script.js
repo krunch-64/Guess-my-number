@@ -58,6 +58,7 @@ function startGame(max) {
                     $(".game input").attr("placeholder" , "Le chiffre c'était "+ number).val("");
                     $(".replay").removeClass("d-none");
                     $(".guess").addClass("d-none");
+                    $(".shrek img").attr("src","./assets/img/shrek 2.png")
                 }
             }
         });
