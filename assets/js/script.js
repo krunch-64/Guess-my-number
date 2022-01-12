@@ -38,7 +38,7 @@ function startGame(max) {
             
             // On ajoute la valeur que l'utilisateur a rentrée dans un tableau puis on l'affiche sous le bouton "Deviner"
             pNomArray.push(playerNumber);
-            $('#answer').text(pNomArray);
+            $('#answers').text(pNomArray);
             // console.log(pNomArray);
             
             // On test la validité du nombre 
