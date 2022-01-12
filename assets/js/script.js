@@ -29,11 +29,17 @@ function startGame(max) {
         // On initialise le décompte des essais
         let count = 0;
         let guessLeft = 0;
+        let pNomArray = [];
 
         // Execute la fonction sur le click du bouton "Deviner"
         $(".guess").on("click", function () {
             // On récupère le nombre que l'utilisateur a entrée
             let playerNumber = parseInt($(".game input").val());
+            
+            // On ajoute la valeur que l'utilisateur a rentrée dans un tableau puis on l'affiche sous le bouton "Deviner"
+            pNomArray.push(playerNumber);
+            $('#answer').text(pNomArray);
+            // console.log(pNomArray);
             
             // On test la validité du nombre 
             if (playerNumber > max || playerNumber == "" || playerNumber < 0) {
