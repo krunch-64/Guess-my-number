@@ -34,10 +34,10 @@ function startGame(max) {
             let playerNumber = parseInt($(".game input").val());
             
             // On test la validité du nombre 
-            if (playerNumber > max , playerNumber == "" , playerNumber < 0) {
-                $(".game input").attr("placeholder" , "saisie non valide").val("");
+            if (playerNumber > max || playerNumber == "" || playerNumber < 0) {
+                $(".game input").attr("placeholder" , "saisie non valide").val("").addClass("is-invalid");
                 $(".game input").click( function () {
-                    $(".game input").attr("placeholder" , "Entre 0 et "+max);
+                    $(".game input").attr("placeholder" , "Entre 0 et "+max).removeClass("is-invalid");
                 });
             }
             else {
