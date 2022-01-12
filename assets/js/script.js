@@ -46,6 +46,7 @@ function startGame(max) {
                 // Si le nombre est plus grand que la réponse on affiche "Plus Bas"
                 if (playerNumber > number ) {
                     count += 1;
+                    // Calcule les essais restant
                     guessLeft = 10 - count;
                     $(".form-label").text("Plus Bas, il vous reste "+guessLeft+" essais !");
                     $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
@@ -54,6 +55,7 @@ function startGame(max) {
                 // Si le nombre est plus petit que la réponse on affiche "Plus Haut"
                 else if (playerNumber < number) {
                     count += 1;
+                    // Calcule les essais restant
                     guessLeft = 10 - count;
                     $(".form-label").text("Plus Haut, il vous reste "+guessLeft+" essais !");
                     $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
@@ -68,6 +70,7 @@ function startGame(max) {
                     $(".guess").addClass("d-none");
                     $(".shrek img").attr("src","./assets/img/shrek 2.png")
                 }
+                // Quand l'utilisateur a utilisé ses 10 essais, il a perdu la partie
                 else if(count == 10){
                     $(".form-label").text("Tu as perdu avec "+count+" coups");
                     $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
