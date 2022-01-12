@@ -26,7 +26,7 @@ function startGame(max) {
         }
     })
     function game(number) {
-        // On initialise le décompte des essais
+        // On initialise le décompte des essais, les essais restant et le tableau des valeurs déjà entrée
         let count = 0;
         let guessLeft = 0;
         let pNomArray = [];
