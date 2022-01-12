@@ -22,7 +22,7 @@ function startGame(max) {
             $(".game input").attr("placeholder" , "Entre 0 et "+max);
             // On execute la fonction game() avec comme paramètre : le nombre random
             game(number);
-            // console.log(number);
+            console.log(number);
         }
     })
     function game(number) {
