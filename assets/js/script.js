@@ -24,7 +24,7 @@ function startGame(max) {
     })
     function game(number) {
         // On initialise le décompte des essais
-        let count = 0
+        let count = 0;
 
         // Execute la fonction sur le click du bouton "Deviner"
         $(".guess").on("click", function () {
@@ -51,7 +51,7 @@ function startGame(max) {
                     $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
                     count += 1;
                 }
-                // Si le nombre est égale à la réponse on affiche "Le chiffre c'était number"
+                // Si le nombre est égale à la réponse on affiche "Le chiffre c'était number" avec le nombre de coup jouer
                 else if (playerNumber == number){
                     count += 1;
                     $(".form-label").text("Tu as gagné avec "+count+" coup");
@@ -66,7 +66,7 @@ function startGame(max) {
         $(".replay").click( function () {
             location.reload();
         });
-    }
+    };
 };
 
 
