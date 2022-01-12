@@ -71,7 +71,7 @@ function startGame(max) {
                     $(".shrek img").attr("src","./assets/img/shrek 2.png")
                 }
                 // Quand l'utilisateur a utilisé ses 10 essais, il a perdu la partie
-                else if(count == 10){
+                if(count == 10){
                     $(".form-label").text("Tu as perdu avec "+count+" coups");
                     $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
                     $(".replay").removeClass("d-none");
