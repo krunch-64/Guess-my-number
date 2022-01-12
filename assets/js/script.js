@@ -1,15 +1,17 @@
 // Fonction commencer la partie
 function startGame(max) {
+    // on cache la partie jeux pour laisser le choix du niveaux
     $(".game").addClass("d-none");
     $('select').on('change', function() {
         max = $("select").val();
         $("select").removeClass("is-invalid");
     });
-    // Sur le click du bouton "commencer", on vérifie la validité de l'input puis on génère un nombre random
+    // Sur le click du bouton "commencer", on vérifie si le joueur a selectionné un niveaux 
     $("#btn-start").click(function () {
         if ($("select").val() == "Sélectionnez une difficulté" ) {
                 $("select").addClass("is-invalid");
         }
+        // quand le joueur a sélection un niveau est cliquer sur le bouton commencé 
         else {
             // Cache .selectLevel et .replay et affiche .game
             $(".selectLevel").addClass("d-none");

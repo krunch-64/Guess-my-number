@@ -8,9 +8,11 @@ body {
 
     
 }
-.shrek {
+.container .shrek {
     position: fixed;
     margin-bottom: 18px; 
+    width: 450px;
+    display: flex;
     
 }
 header {
