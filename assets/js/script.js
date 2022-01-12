@@ -68,7 +68,7 @@ function startGame(max) {
                     $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
                     $(".replay").removeClass("d-none");
                     $(".guess").addClass("d-none");
-                    $(".shrek img").attr("src","./assets/img/shrek 2.png")
+                    $(".shrek img").attr("src","./assets/img/shrek 2.png");
                 }
                 // Quand l'utilisateur a utilisé ses 10 essais, il a perdu la partie
                 if(count == 10){
@@ -76,8 +76,8 @@ function startGame(max) {
                     $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
                     $(".replay").removeClass("d-none");
                     $(".guess").addClass("d-none");
-                }
-            }
+                };
+            };
         });
         // Recharge la page pour rejouer
         $(".replay").click( function () {
