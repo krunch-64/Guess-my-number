@@ -22,11 +22,13 @@ function startGame(max) {
             $(".game input").attr("placeholder" , "Entre 0 et "+max);
             // On execute la fonction game() avec comme paramètre : le nombre random
             game(number);
+            // console.log(number);
         }
     })
     function game(number) {
         // On initialise le décompte des essais
         let count = 0;
+        let guessLeft = 0;
 
         // Execute la fonction sur le click du bouton "Deviner"
         $(".guess").on("click", function () {
@@ -43,24 +45,34 @@ function startGame(max) {
             else {
                 // Si le nombre est plus grand que la réponse on affiche "Plus Bas"
                 if (playerNumber > number ) {
-                  $(".form-label").text("Plus Bas");
-                  $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
-                  count += 1;
+                    count += 1;
+                    guessLeft = 10 - count;
+                    $(".form-label").text("Plus Bas, il vous reste "+guessLeft+" essais !");
+                    $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
+                  
                 }
                 // Si le nombre est plus petit que la réponse on affiche "Plus Haut"
                 else if (playerNumber < number) {
-                    $(".form-label").text("Plus Haut");
-                    $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
                     count += 1;
+                    guessLeft = 10 - count;
+                    $(".form-label").text("Plus Haut, il vous reste "+guessLeft+" essais !");
+                    $(".game input").attr("placeholder" , "Entre 0 et "+max).val("");
+                    
                 }
                 // Si le nombre est égale à la réponse on affiche "Le chiffre c'était number" avec le nombre de coup jouer
                 else if (playerNumber == number){
                     count += 1;
-                    $(".form-label").text("Tu as gagné avec "+count+" coup");
-                    $(".game input").attr("placeholder" , "Le chiffre c'était "+ number).val("");
+                    $(".form-label").text("Tu as gagné avec "+count+" coup(s)");
+                    $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
                     $(".replay").removeClass("d-none");
                     $(".guess").addClass("d-none");
                     $(".shrek img").attr("src","./assets/img/shrek 2.png")
+                }
+                else if(count == 10){
+                    $(".form-label").text("Tu as perdu avec "+count+" coups");
+                    $(".game input").attr("placeholder" , "Le chiffre était "+ number).val("");
+                    $(".replay").removeClass("d-none");
+                    $(".guess").addClass("d-none");
                 }
             }
         });
