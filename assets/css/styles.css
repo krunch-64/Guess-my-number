@@ -10,7 +10,7 @@ body {
 
 .container .shrek {
     position: fixed;
-    margin-bottom: 18px; 
+    margin-bottom: 10px; 
     width: 450px;
     display: flex;
     
@@ -55,11 +55,16 @@ h1 {
     .container .family { 
         width: 290px;
         height: 290px; 
-        right: 190px;
+        right: 150px;
     } 
     .container .shrek{
         left: 40px;
         
+    }
+    .container .lord{
+        width: 290px;
+        height: 290px; 
+        right: 50px;
     }
 }
 
